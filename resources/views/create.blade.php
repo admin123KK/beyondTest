@@ -32,7 +32,6 @@
                 <label>Confirm Password</label>
                 <input type="password" name="password_confirmation" class="form-control" required>
             </div>
-
             <button type="submit" class="btn btn-primary">Save User</button>
             <a href="{{ route('users.index') }}" class="btn btn-secondary">Cancel</a>
         </form>

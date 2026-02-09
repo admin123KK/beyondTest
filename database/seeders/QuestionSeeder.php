@@ -23,7 +23,7 @@ class QuestionSeeder extends Seeder
         Question::create(['question' => 'What is the speed of light in vacuum?', 'option1' => '300,000 km/s', 'option2' => '150,000 km/s', 'option3' => '1,000 km/s', 'option4' => '3,000 km/s', 'correct_option' => 1, 'category' => 'science']);
         Question::create(['question' => 'Which planet is known as the Red Planet?', 'option1' => 'Venus', 'option2' => 'Mars', 'option3' => 'Jupiter', 'option4' => 'Saturn', 'correct_option' => 2, 'category' => 'astronomy']);
         // Add more (aim for 20+)
-        Question::create(['question' => 'What is the capital of Japan?', 'option1' => 'Seoul', 'option2' => 'Beijing', 'option3' => 'Tokyo', 'option4' => 'Bangkok', 'correct_option' => 3, 'category' => 'geography']);
+        Question:: create(['question' => 'What is the capital of Japan?', 'option1' => 'Seoul', 'option2' => 'Beijing', 'option3' => 'Tokyo', 'option4' => 'Bangkok', 'correct_option' => 3, 'category' => 'geography']);
         Question::create(['question' => 'Who wrote "Romeo and Juliet"?', 'option1' => 'Charles Dickens', 'option2' => 'William Shakespeare', 'option3' => 'Jane Austen', 'option4' => 'Mark Twain', 'correct_option' => 2, 'category' => 'literature']);
         Question::create(['question' => 'What is the largest ocean on Earth?', 'option1' => 'Atlantic', 'option2' => 'Indian', 'option3' => 'Pacific', 'option4' => 'Arctic', 'correct_option' => 3, 'category' => 'geography']);
         Question::create(['question' => 'In which year was the United Nations founded?', 'option1' => '1918', 'option2' => '1945', 'option3' => '1950', 'option4' => '1960', 'correct_option' => 2, 'category' => 'history']);
