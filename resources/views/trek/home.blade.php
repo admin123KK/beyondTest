@@ -1,11 +1,21 @@
-<x-app-layout>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himalayan Harmony - Explore the Himalayas</title>
+
+    <!-- Tailwind via CDN (for quick testing - later use Vite) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Your custom styles -->
     <style>
         .hero {
             position: relative;
             height: 100vh;
-            min-height: 900px;
+            min-height: 800px;
             background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)),
-                url('{{ asset('images/home-pokhara-abc.jpg') }}') center/cover no-repeat fixed;
+                        url('{{ asset('images/home-pokhara-abc.jpg') }}') center/cover no-repeat fixed;
             color: white;
             display: flex;
             align-items: center;
@@ -19,7 +29,7 @@
             left: 0;
             right: 0;
             z-index: 100;
-            padding: 2rem 5%;
+            padding: 1rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -99,46 +109,23 @@
         }
 
         @keyframes bounce {
-
-            0%,
-            20%,
-            50%,
-            80%,
-            100% {
-                transform: translate(-50%, 0);
-            }
-
-            40% {
-                transform: translate(-50%, -20px);
-            }
-
-            60% {
-                transform: translate(-50%, -10px);
-            }
+            0%, 20%, 50%, 80%, 100% { transform: translate(-50%, 0); }
+            40% { transform: translate(-50%, -20px); }
+            60% { transform: translate(-50%, -10px); }
         }
 
         @media (max-width: 768px) {
-            .hero-title {
-                font-size: 4rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.5rem;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .cta {
-                padding: 1rem 2.5rem;
-                font-size: 1.2rem;
-            }
+            .hero-title { font-size: 4rem; }
+            .hero-subtitle { font-size: 1.5rem; }
+            .nav-links { display: none; }
+            .cta { padding: 1rem 2.5rem; font-size: 1.2rem; }
         }
     </style>
+</head>
+<body>
 
     <div class="hero">
-        <!-- Navigation -->
+        <!-- Custom Navigation (no Breeze bar) -->
         <nav class="nav">
             <a href="{{ route('trek.home') }}" class="logo">Himalayan Harmony</a>
 
@@ -170,4 +157,6 @@
             Scroll down ↓
         </div>
     </div>
-</x-app-layout>
+
+</body>
+</html>
