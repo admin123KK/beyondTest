@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
     <div class="container mt-5">
         <h1>Add New User</h1>
