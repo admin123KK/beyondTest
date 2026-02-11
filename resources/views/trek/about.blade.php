@@ -14,7 +14,7 @@
             margin: 0;
             font-family: 'Poppins', sans-serif;
         }
-
+        
         .hero {
             position: relative;
             height: 100vh;

@@ -36,5 +36,6 @@ Route::prefix('trek')->name('trek.')->group(function () {
     Route::post('/booking', [TrekController::class, 'storeBooking'])->name('storeBooking');
     Route::get('/contact', [TrekController::class, 'contact'])->name('contact');
     Route::get('/gallery', [TrekController::class, 'gallery'])->name('gallery');
+    Route::get('/admin/bookings', [TrekController::class, 'adminBookings'])->name('admin.bookings');
     // Removed duplicate /trek/dashboard — you don't need it
 });

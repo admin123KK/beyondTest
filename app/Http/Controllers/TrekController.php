@@ -30,19 +30,27 @@ class TrekController extends Controller
     {
         return view('trek.gallery');
     }
+    public function adminBookings()
+    {
+        $bookings = Booking::latest()->get();
+        return view('admin.bookings', compact('bookings'));
+    }
     public function storeBooking(Request $request)
     {
-        $request->validate([
+        $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|email',
-            'dates' => 'required|string',
+            'email' => 'required|email|max:255',
+            'phone' => 'required|string|max:20',
+            'package' => 'required|string|max:255',
+            'dates' => 'required|string|max:100',
+            'people' => 'required|integer|min:1',
+            'message' => 'nullable|string',
         ]);
 
-        Booking::create($request->all());
+        Booking::create($validated);
 
-        return redirect()->route('trek.home')->with('success', 'Booking submitted successfully!');
+        return redirect()->back()->with('success', 'Booking request submitted! We will contact you soon.');
     }
-
     public function contact()
     {
         return view('trek.contact');

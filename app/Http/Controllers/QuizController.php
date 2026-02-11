@@ -8,9 +8,8 @@ use App\Models\UserScore;
 
 class QuizController extends Controller
 {
-    /**
-     * Start the quiz: Select 10 random questions and initialize session
-     */
+   
+   
     public function start()
     {
         // Get 10 random questions
